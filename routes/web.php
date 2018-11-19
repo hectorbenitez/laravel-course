@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
 
-Route::get('/test', function () {
-    return view('welcome2', [ 'title' => 'Laravel 3' ]);
-});
+Route::get('/dashboard', 'DashboardController@index');
