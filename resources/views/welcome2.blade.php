@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel 2
+                    {{ $title }}
                 </div>
 
                 <div class="links">

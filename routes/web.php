@@ -16,5 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    return view('welcome2');
+    return view('welcome2', [ 'title' => 'Laravel 3' ]);
 });
