@@ -11,7 +11,7 @@
             <a href="/expense_reports" class="btn btn-primary">Back</a>
         </div>
     </div>
-    <row>
+    <div class="row">
         <div class="col">
             <h2>Expenses</h2>
             <table class="table">
@@ -29,5 +29,10 @@
                 @endforeach
             </table>
         </div>
-    </row>
+    </div>
+    <div class="row">
+        <div class="col">
+            <a href="/expense_reports/{{ $report->id }}/expenses/create" class="btn">Add expense</a>
+        </div>
+    </div>
 @endsection
