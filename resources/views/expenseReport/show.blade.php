@@ -13,6 +13,11 @@
     </div>
     <div class="row">
         <div class="col">
+            <a href="/expense_reports/{{ $report->id }}/confirmSendMail" class="btn">Send via email</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
             <h2>Expenses</h2>
             <table class="table">
                 <tr>
