@@ -1,30 +1,35 @@
-@extends('layouts.base')
+@extends('layouts.app')
 
 @section('content')
-    <div class="row">
-        <div class="col">
-            <h1>Expense Reports</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Expense Reports</h1>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <a href="/expense_reports/create" class="btn btn-primary">New expense report...</a>
+        <div class="row">
+            <div class="col-md-12">
+                <a href="/expense_reports/create" class="btn btn-primary">New expense report...</a>
+                <br><br>
+            </div>
         </div>
-    </div>
-    <row>
-        <div class="col">
-            <table class="table">
-                <tr>
-                    <th>Title</th>
-                </tr>
-                @foreach($expenseReports as $expenseReport)
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
                     <tr>
-                        <td><a href="/expense_reports/{{ $expenseReport->id }}">{{ $expenseReport->title }}</a></td>
-                        <td><a href="/expense_reports/{{ $expenseReport->id }}/edit">Edit</a></td>
-                        <td><a href="/expense_reports/{{ $expenseReport->id }}/confirmDelete">Delete</a></td>
+                        <th>Title</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
-                @endforeach
-            </table>
+                    @foreach($expenseReports as $expenseReport)
+                        <tr>
+                            <td><a href="/expense_reports/{{ $expenseReport->id }}">{{ $expenseReport->title }}</a></td>
+                            <td><a href="/expense_reports/{{ $expenseReport->id }}/edit">Edit</a></td>
+                            <td><a href="/expense_reports/{{ $expenseReport->id }}/confirmDelete">Delete</a></td>
+                        </tr>
+                    @endforeach
+                </table>
+            </div>
         </div>
-    </row>
+    </div>
 @endsection
