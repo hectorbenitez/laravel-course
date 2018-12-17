@@ -16,5 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    return view('test');
+    return view('test', [
+        'title' => 'Curso Laravel en Platzi!!!!!'
+    ]);
 });
