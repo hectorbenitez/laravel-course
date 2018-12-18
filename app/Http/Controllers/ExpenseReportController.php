@@ -111,4 +111,16 @@ class ExpenseReportController extends Controller
             'report' => $report
         ]);
     }
+
+    public function confirmSendMail($id) {
+        $report = ExpenseReport::find($id);
+        return view('expenseReport.confirmSendMail', [
+            'report' => $report
+        ]);
+    }
+
+    public function sendMail($id) {
+        $report = ExpenseReport::find($id);
+        return $report;
+    }
 }
