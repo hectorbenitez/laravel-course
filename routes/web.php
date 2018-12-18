@@ -23,3 +23,7 @@ Route::post('/expense_reports/{id}/sendMail', 'ExpenseReportController@sendMail'
 Route::get('/expense_reports/{expense_report}/expenses/create', 'ExpenseController@create');
 Route::post('/expense_reports/{expense_report}/expenses', 'ExpenseController@store');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
